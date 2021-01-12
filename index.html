@@ -27,35 +27,36 @@
         //second argument is the contract address from the Solidity deployment
         async function loadContract(){
             return await new window.web3.eth.Contract([
-                {
-                    "constant": false,
-                    "inputs": [
-                        {
-                            "name": "_coolNumber",
-                            "type": "uint256"
-                        }
-                    ],
-                    "name": "setCoolNumber",
-                    "outputs": [],
-                    "payable": false,
-                    "stateMutability": "nonpayable",
-                    "type": "function"
-                },
-                {
-                    "constant": true,
-                    "inputs": [],
-                    "name": "coolNumber",
-                    "outputs": [
-                        {
-                            "name": "",
-                            "type": "uint256"
-                        }
-                    ],
-                    "payable": false,
-                    "stateMutability": "view",
-                    "type": "function"
-                }
-            ],'0xd1EBbe15B991Ec9C97c7b611B66BAB0c8489C46E')
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_coolNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "setCoolNumber",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "coolNumber",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+
+        ],'0x39a8916e4ae00e13a85594598447dc69537be4f3')
         }
 
         async function printCoolNumber(){
